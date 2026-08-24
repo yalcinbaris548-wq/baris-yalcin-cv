@@ -22,7 +22,7 @@ const DB_PATH = path.join(__dirname, 'database.json');
 const EMAIL_CONFIG = {
     to: 'yalcinbaris548@gmail.com',
     from: 'yalcinbaris548@gmail.com',
-    appPassword: 'BURAYA_APP_PASSWORD_YAZIN'  // ← Google App Password buraya
+    appPassword: 'xmofwmfpthobaobc'
 };
 
 const transporter = nodemailer.createTransport({

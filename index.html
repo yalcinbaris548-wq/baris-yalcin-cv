@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Barış Yalçın | Bilgisayar Teknikeri & Yazılım Geliştirici</title>
+    <meta name="description" content="Barış Yalçın - Bilgisayar Teknikeri, Yazılım Geliştirici. C#, Java, JavaScript, SQL, Bilgisayarlı Görü, Yapay Zeka projeleri.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="nav-logo" onclick="navigateTo('home')">
+            <span class="logo-bracket">&lt;</span>BY<span class="logo-bracket">/&gt;</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link active" data-page="home">Ana Sayfa</a>
+            <a href="#about" class="nav-link" data-page="about">Hakkımda</a>
+            <a href="#education" class="nav-link" data-page="education">Eğitim</a>
+            <a href="#experience" class="nav-link" data-page="experience">Deneyim</a>
+            <a href="#skills" class="nav-link" data-page="skills">Yetenekler</a>
+            <a href="#projects" class="nav-link" data-page="projects">Projeler</a>
+            <a href="#certificates" class="nav-link" data-page="certificates">Sertifikalar</a>
+            <a href="#guestbook" class="nav-link" data-page="guestbook">Ziyaretçi Defteri</a>
+            <a href="#contact" class="nav-link" data-page="contact">İletişim</a>
+        </div>
+        <button class="nav-hamburger" id="hamburger-btn" aria-label="Menüyü Aç">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#home" class="mobile-link" data-page="home">Ana Sayfa</a>
+        <a href="#about" class="mobile-link" data-page="about">Hakkımda</a>
+        <a href="#education" class="mobile-link" data-page="education">Eğitim</a>
+        <a href="#experience" class="mobile-link" data-page="experience">Deneyim</a>
+        <a href="#skills" class="mobile-link" data-page="skills">Yetenekler</a>
+        <a href="#projects" class="mobile-link" data-page="projects">Projeler</a>
+        <a href="#certificates" class="mobile-link" data-page="certificates">Sertifikalar</a>
+        <a href="#guestbook" class="mobile-link" data-page="guestbook">Ziyaretçi Defteri</a>
+        <a href="#contact" class="mobile-link" data-page="contact">İletişim</a>
+    </div>
+
+    <!-- Page Progress Indicator -->
+    <div class="progress-bar" id="progress-bar"></div>
+
+    <!-- ==================== PAGE: HOME ==================== -->
+    <section class="page active" id="page-home" data-theme="home">
+        <div class="particles" id="particles-home"></div>
+        <div class="page-content hero-content">
+            <div class="hero-text">
+                <div class="hero-greeting animate-in">Merhaba, Ben</div>
+                <h1 class="hero-name animate-in delay-1">
+                    <span class="name-first">Barış</span>
+                    <span class="name-last">Yalçın</span>
+                </h1>
+                <div class="hero-title animate-in delay-2">
+                    <span class="typing-text" id="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description animate-in delay-3">
+                    Yazılım geliştirmeye tutkulu, yapay zeka ve bilgisayarlı görü alanlarında deneyimli,
+                    yenilikçi çözümler üreten bir teknoloji yeteneği.
+                </p>
+                <div class="hero-cta animate-in delay-4">
+                    <button class="btn btn-primary" onclick="navigateTo('about')">
+                        <span>Hakkımda</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                    <button class="btn btn-outline" onclick="navigateTo('contact')">
+                        <span>İletişim</span>
+                    </button>
+                </div>
+                <div class="hero-stats animate-in delay-5">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Programlama Dili</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="4">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Proje</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="1">0</span>
+                        <span class="stat-label">TÜBİTAK Programı</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual animate-in delay-2">
+                <div class="code-window">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="code-title">barisyalcin.cs</span>
+                    </div>
+                    <pre class="code-body"><code><span class="code-keyword">public class</span> <span class="code-class">BarisYalcin</span>
+{
+    <span class="code-keyword">public string</span> Konum = <span class="code-string">"Kozan, Adana"</span>;
+    <span class="code-keyword">public string[]</span> Diller = {
+        <span class="code-string">"C#"</span>, <span class="code-string">"Java"</span>,
+        <span class="code-string">"JavaScript"</span>, <span class="code-string">"SQL"</span>
+    };
+    <span class="code-keyword">public bool</span> IsAvailable = <span class="code-bool">true</span>;
+
+    <span class="code-keyword">public string</span> <span class="code-method">GetMotivation</span>()
+    {
+        <span class="code-keyword">return</span> <span class="code-string">"Her zaman öğrenmeye açık!"</span>;
+    }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" onclick="navigateTo('about')">
+            <span>Aşağı Kaydır</span>
+            <div class="scroll-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PAGE: ABOUT ==================== -->
+    <section class="page" id="page-about" data-theme="about">
+        <div class="page-content">
+            <div class="section-header">
+                <span class="section-tag">01</span>
+                <h2 class="section-title">Profesyonel Özet</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-card glass-card animate-on-scroll">
+                    <div class="about-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3>Deneyim & Eğitim</h3>
+                    <p>Bitlis Eren Üniversitesi Bilgisayar Teknolojisi önlisans programından mezun, yazılım geliştirmeye tutkulu ve gelişime açık bilgisayar teknikeri.</p>
+                </div>
+                <div class="about-card glass-card animate-on-scroll">
+                    <div class="about-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Teknik Beceriler</h3>
+                    <p>C#, Java, JavaScript ve SQL dillerinde pratik tecrübeye sahip; bilgisayarlı görü, otomasyon sistemleri ve oyun geliştirme konularında uygulamalı proje geçmişi.</p>
+                </div>
+                <div class="about-card glass-card animate-on-scroll">
+                    <div class="about-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                    </div>
+                    <h3>Yapay Zeka & Araştırma</h3>
+                    <p>TÜBİTAK STAR programı kapsamında tarım teknolojileri (AgriTech) üzerine yapay zeka modelleri eğiterek analitik problem çözme yeteneklerini kanıtlamıştır.</p>
+                </div>
+                <div class="about-card glass-card animate-on-scroll">
+                    <div class="about-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <h3>Yenilikçi Yaklaşım</h3>
+                    <p>Kamu ve özel sektör deneyimi ile altyapı operasyonlarından yazılım geliştirmeye kadar geniş bir yelpazede yetkinlik sahibi, yenilikçi bir teknoloji yeteneği.</p>
+                </div>
+            </div>
+            <div class="about-highlight glass-card animate-on-scroll">
+                <div class="highlight-icon">🎯</div>
+                <div class="highlight-content">
+                    <h3>Kariyer Hedefi</h3>
+                    <p>Yazılım geliştirme, yapay zeka ve bilgisayarlı görü alanlarında uzmanlaşarak, yenilikçi teknoloji çözümleri üreten bir yazılım mühendisi olmak.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PAGE: EDUCATION ==================== -->
+    <section class="page" id="page-education" data-theme="education">
+        <div class="page-content">
+            <div class="section-header">
+                <span class="section-tag">02</span>
+                <h2 class="section-title">Eğitim Bilgileri</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-container">
+                <div class="timeline">
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="edu-badge">Önlisans</div>
+                            <h3>Bitlis Eren Üniversitesi</h3>
+                            <h4>Tatvan Meslek Yüksekokulu</h4>
+                            <p class="edu-department">📚 Bölüm: Bilgisayar Teknolojisi</p>
+                            <div class="edu-details">
+                                <div class="edu-detail">
+                                    <span class="detail-label">Mezuniyet</span>
+                                    <span class="detail-value">19.06.2026</span>
+                                </div>
+                                <div class="edu-detail">
+                                    <span class="detail-label">Diploma Notu</span>
+                                    <span class="detail-value highlight-value">2.38 / 4.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="courses-section animate-on-scroll">
+                    <h3 class="courses-title">📖 Alınan Temel Dersler</h3>
+                    <div class="courses-grid">
+                        <div class="course-category glass-card">
+                            <div class="course-icon">💻</div>
+                            <h4>Yazılım & Algoritma</h4>
+                            <ul>
+                                <li>Algoritma ve Programlamaya Giriş</li>
+                                <li>Veri Yapıları ve Programlama</li>
+                                <li>Görsel Programlama I-II</li>
+                                <li>Nesne Tabanlı Programlama</li>
+                            </ul>
+                            <div class="course-tech">Ağırlıklı olarak <strong>C#</strong> dili ile</div>
+                        </div>
+                        <div class="course-category glass-card">
+                            <div class="course-icon">🌐</div>
+                            <h4>Web Geliştirme</h4>
+                            <ul>
+                                <li>Web Tasarım Temelleri</li>
+                                <li>İnternet Programcılığı I-II</li>
+                            </ul>
+                            <div class="course-tech"><strong>JavaScript, HTML, CSS</strong> ile</div>
+                        </div>
+                        <div class="course-category glass-card">
+                            <div class="course-icon">🗄️</div>
+                            <h4>Veri Tabanı</h4>
+                            <ul>
+                                <li>Veri Tabanı Yönetim Bilgi Sistemleri I-II</li>
+                            </ul>
+                            <div class="course-tech"><strong>SQL</strong> ile</div>
+                        </div>
+                        <div class="course-category glass-card">
+                            <div class="course-icon">🔧</div>
+                            <h4>Sistem & Donanım</h4>
+                            <ul>
+                                <li>Bilgisayar Donanımı</li>
+                                <li>Bilgisayar Ağ Sistemleri</li>
+                                <li>Robotik Programlama</li>
+                                <li>Java Programlama</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PAGE: EXPERIENCE ==================== -->
+    <section class="page" id="page-experience" data-theme="experience">
+        <div class="page-content">
+            <div class="section-header">
+                <span class="section-tag">03</span>
+                <h2 class="section-title">İş & Staj Deneyimi</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-container">
+                <div class="exp-card glass-card animate-on-scroll">
+                    <div class="exp-header">
+                        <div class="exp-company-logo">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M3 7v14M21 7v14M6 11h.01M6 15h.01M10 11h.01M10 15h.01M14 11h.01M14 15h.01M18 11h.01M18 15h.01M12 3l9 4-9 4-9-4 9-4z"/></svg>
+                        </div>
+                        <div class="exp-info">
+                            <h3>Stajyer — Bilgi İşlem Departmanı</h3>
+                            <h4>Kozan Belediyesi</h4>
+                            <span class="exp-location">📍 Kozan, Adana</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <p class="exp-description">
+                            Kurumun bilgi işlem süreçlerine ve altyapı operasyonlarına destek verilmesi, 
+                            donanım ve yazılım gereksinimlerinin karşılanarak sistem sürekliliğinin sağlanması.
+                        </p>
+                        <div class="exp-tasks">
+                            <h5>Sorumluluklar</h5>
+                            <div class="task-list">
+                                <div class="task-item">
+                                    <span class="task-bullet"></span>
+                                    <span>Bilgi işlem altyapısının bakım ve yönetimi</span>
+                                </div>
+                                <div class="task-item">
+                                    <span class="task-bullet"></span>
+                                    <span>Donanım sorun giderme ve teknik destek</span>
+                                </div>
+                                <div class="task-item">
+                                    <span class="task-bullet"></span>
+                                    <span>Yazılım kurulum ve güncelleme işlemleri</span>
+                                </div>
+                                <div class="task-item">
+                                    <span class="task-bullet"></span>
+                                    <span>Ağ sistemleri izleme ve destek</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="exp-tags">
+                            <span class="tag">Donanım</span>
+                            <span class="tag">Ağ Sistemleri</span>
+                            <span class="tag">Windows</span>
+                            <span class="tag">Teknik Destek</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PAGE: SKILLS ==================== -->
+    <section class="page" id="page-skills" data-theme="skills">
+        <div class="page-content">
+            <div class="section-header">
+                <span class="section-tag">04</span>
+                <h2 class="section-title">Teknik Yetkinlikler</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skill-group glass-card animate-on-scroll">
+                    <div class="skill-group-header">
+                        <div class="skill-group-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3>Programlama Dilleri & Web</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">C#</span>
+                                <span class="skill-level">İleri</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-level">Orta</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">Orta</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML / CSS</span>
+                                <span class="skill-level">Orta</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-group glass-card animate-on-scroll">
+                    <div class="skill-group-header">
+                        <div class="skill-group-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <h3>Yapay Zeka & Görüntü İşleme</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Computer Vision</span>
+                                <span class="skill-level">Orta</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Object Detection</span>
+                                <span class="skill-level">Orta</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Roboflow</span>
+                                <span class="skill-level">Orta</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-group glass-card animate-on-scroll">
+                    <div class="skill-group-header">
+                        <div class="skill-group-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                        </div>
+                        <h3>Veri Tabanı</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-level">İleri</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Karmaşık Sorgular</span>
+                        <span class="skill-tag">JOIN İşlemleri</span>
+                        <span class="skill-tag">Veri Optimizasyonu</span>
+                    </div>
+                </div>
+
+                <div class="skill-group glass-card animate-on-scroll">
+                    <div class="skill-group-header">
+                        <div class="skill-group-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <h3>Çerçeveler, Araçlar & Sistem</h3>
+                    </div>
+                    <div class="skill-tags" style="margin-top: 1rem;">
+                        <span class="skill-tag">Windows Forms</span>
+                        <span class="skill-tag">OOP</span>
+                        <span class="skill-tag">Donanım Sorun Giderme</span>
+                        <span class="skill-tag">Ağ Sistemleri</span>
+                        <span class="skill-tag">Windows OS Yönetimi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PAGE: PROJECTS ==================== -->
+    <section class="page" id="page-projects" data-theme="projects">
+        <div class="page-content">
+            <div class="section-header">
+                <span class="section-tag">05</span>
+                <h2 class="section-title">Projeler & Deneyimler</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card animate-on-scroll">
+                    <div class="project-badge tubitak">TÜBİTAK</div>
+                    <div class="project-icon">🤖</div>
+                    <h3>Yapay Zeka Destekli Tahıl Temizleme Sistemi</h3>
+                    <p class="project-program">TÜBİTAK 2247-C STAR Programı</p>
+                    <p class="project-desc">
+                        Tahıl temizliği ve ayrıştırması süreçlerini otomatize etmek amacıyla yapay zeka tabanlı 
+                        bir uygulamanın geliştirilmesi. Roboflow platformu kullanılarak bilgisayarlı görü veri 
+                        setlerinin oluşturulması, etiketlenmesi ve nesne tespiti modellerinin eğitilmesi.
+                    </p>
+                    <div class="project-tech">
+                        <span>Computer Vision</span>
+                        <span>Roboflow</span>
+                        <span>Object Detection</span>
+                        <span>AI/ML</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card animate-on-scroll">
+                    <div class="project-icon">🏥</div>
+                    <h3>Hastane Otomasyon Sistemi</h3>
+                    <p class="project-desc">
+                        C# ve SQL Server kullanılarak doktor ve hasta verilerinin yönetildiği, 
+                        randevu çakışmalarını denetleyen kapsamlı bir masaüstü otomasyon sisteminin geliştirilmesi.
+                    </p>
+                    <div class="project-tech">
+                        <span>C#</span>
+                        <span>SQL Server</span>
+                        <span>WinForms</span>
+                        <span>OOP</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card animate-on-scroll">
+                    <div class="project-icon">🚗</div>
+                    <h3>Araç Satış Veri Tabanı (ArabaSatisDB)</h3>
+                    <p class="project-desc">
+                        SQL kullanılarak araç envanteri, marka, model ve personel takibini sağlayan birbiriyle 
+                        ilişkili tabloların tasarımı ve sorgu optimizasyonlarının yapılması.
+                    </p>
+                    <div class="project-tech">
+                        <span>SQL</span>
+                        <span>Database Design</span>
+                        <span>Query Optimization</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card glass-card animate-on-scroll">
+                    <div class="project-icon">🎮</div>
+                    <h3>2D Platform Oyunu Geliştirme</h3>
+                    <p class="project-desc">
+                        C# dili kullanılarak karakter hareket kontrolleri, oyun fiziği ve kullanıcı arayüzü 
+                        barındıran Mario tarzı bir platform oyununun kodlanması.
+                    </p>
+                    <div class="project-tech">
+                        <span>C#</span>
+                        <span>Game Dev</span>
+                        <span>Physics</span>
+                        <span>UI Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PAGE: CERTIFICATES ==================== -->
+    <section class="page" id="page-certificates" data-theme="certificates">
+        <div class="page-content">
+            <div class="section-header">
+                <span class="section-tag">06</span>
+                <h2 class="section-title">Sertifikalar & Eğitim Kampları</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="certificates-container">
+                <div class="certificate-card glass-card animate-on-scroll">
+                    <div class="cert-icon-wrapper">
+                        <div class="cert-glow"></div>
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 15l-2 5l2-2 2 2-2-5z"/><circle cx="12" cy="9" r="6"/><path d="M9 9l1.5 1.5L14 7"/></svg>
+                    </div>
+                    <h3>Gençlik ve Spor Bakanlığı Vizyon Kampı</h3>
+                    <p class="cert-detail">16. Dönem Katılımcısı</p>
+                    <div class="cert-badge">
+                        <span>Vizyon Kampı</span>
+                    </div>
+                </div>
+                <div class="certificate-card glass-card animate-on-scroll">
+                    <div class="cert-icon-wrapper">
+                        <div class="cert-glow"></div>
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h10"/><path d="M20 17l-2-2m0 0l-2-2m2 2l2-2m-2 2l-2 2"/></svg>
+                    </div>
+                    <h3>TÜBİTAK 2247-C STAR Programı</h3>
+                    <p class="cert-detail">Tarım Teknolojileri (AgriTech) üzerine yapay zeka araştırması</p>
+                    <div class="cert-badge">
+                        <span>Araştırma Programı</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PAGE: GUESTBOOK ==================== -->
+    <section class="page" id="page-guestbook" data-theme="guestbook">
+        <div class="page-content">
+            <div class="section-header">
+                <span class="section-tag">07</span>
+                <h2 class="section-title">Ziyaretçi Defteri</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="guestbook-container">
+                <div class="guestbook-form-wrapper glass-card animate-on-scroll">
+                    <h3>📝 Bir Mesaj Bırakın</h3>
+                    <p class="form-subtitle">Düşüncelerinizi, önerilerinizi veya selamlarınızı paylaşın!</p>
+                    <form id="guestbook-form" class="guestbook-form">
+                        <div class="form-group">
+                            <label for="gb-name">İsminiz</label>
+                            <input type="text" id="gb-name" placeholder="Adınızı girin..." required minlength="2" maxlength="50">
+                        </div>
+                        <div class="form-group">
+                            <label for="gb-message">Mesajınız</label>
+                            <textarea id="gb-message" placeholder="Mesajınızı yazın..." required minlength="3" maxlength="500" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit" id="gb-submit">
+                            <span>Mesajı Gönder</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="guestbook-messages animate-on-scroll">
+                    <div class="messages-header">
+                        <h3>💬 Mesajlar</h3>
+                        <span class="message-count" id="message-count">0 mesaj</span>
+                    </div>
+                    <div class="messages-list" id="messages-list">
+                        <div class="loading-spinner" id="messages-loading">
+                            <div class="spinner"></div>
+                            <span>Mesajlar yükleniyor...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PAGE: CONTACT ==================== -->
+    <section class="page" id="page-contact" data-theme="contact">
+        <div class="page-content">
+            <div class="section-header">
+                <span class="section-tag">08</span>
+                <h2 class="section-title">İletişim</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Benimle İletişime Geçin</h3>
+                    <p>Projeleriniz, iş birliği fırsatları veya herhangi bir soru için benimle iletişime geçmekten çekinmeyin.</p>
+                    <div class="contact-cards">
+                        <a href="tel:+905314814188" class="contact-card glass-card">
+                            <div class="contact-card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <span class="contact-label">Telefon</span>
+                                <span class="contact-value">0531 481 41 88</span>
+                            </div>
+                        </a>
+                        <a href="mailto:yalcinbaris548@gmail.com" class="contact-card glass-card">
+                            <div class="contact-card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <span class="contact-label">E-posta</span>
+                                <span class="contact-value">yalcinbaris548@gmail.com</span>
+                            </div>
+                        </a>
+                        <div class="contact-card glass-card">
+                            <div class="contact-card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <span class="contact-label">Konum</span>
+                                <span class="contact-value">Kozan, Adana</span>
+                            </div>
+                        </div>
+                        <a href="#" class="contact-card glass-card" target="_blank">
+                            <div class="contact-card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">GitHub Profilim</span>
+                            </div>
+                        </a>
+                        <a href="#" class="contact-card glass-card" target="_blank">
+                            <div class="contact-card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">LinkedIn Profilim</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper glass-card animate-on-scroll">
+                    <h3>✉️ Mesaj Gönderin</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ct-name">İsminiz</label>
+                                <input type="text" id="ct-name" placeholder="Adınız" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ct-email">E-posta</label>
+                                <input type="email" id="ct-email" placeholder="ornek@mail.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ct-subject">Konu</label>
+                            <input type="text" id="ct-subject" placeholder="Mesajınızın konusu">
+                        </div>
+                        <div class="form-group">
+                            <label for="ct-message">Mesajınız</label>
+                            <textarea id="ct-message" placeholder="Mesajınızı yazın..." required rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit" id="ct-submit">
+                            <span>Mesajı Gönder</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-bracket">&lt;</span>BY<span class="logo-bracket">/&gt;</span>
+            </div>
+            <div class="visitor-counter">
+                <span class="visitor-icon">👁️</span>
+                <span id="visitor-count">0</span> ziyaret
+            </div>
+            <p>© 2026 Barış Yalçın — Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
